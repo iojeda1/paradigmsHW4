@@ -51,5 +51,5 @@ while (game.tries < 6):
     print(f"Bad letters: {game.bad_letters}")
     print(f"Correct letters: {game.correct_letters}")
 
-if (game.tries >= 6): 
+else: 
     print(f"The answer is {game.word}. You did not correctly guess it within 6 tries.")
