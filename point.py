@@ -6,26 +6,26 @@ class Point:
     def __init__(self, x, y):
         self.x = x
         self.y = y
-    
+    # get euclidean distance 
     def distance(self):
         totald = (self.x *self.x) + (self.y*self.y)
         return math.sqrt(totald)
     
     def print(self):
         print(f"({self.x}, {self.y})")
-
+    # return true if p1 is more distant to the origin than p2
     def __gt__(self, other): 
         return (self.distance() > other.distance())
-    
+    # return true if p1 is greater than or equally distant to the origin compared to p2
     def __ge__(self, other): 
         return (self.distance() >= other.distance())
-    
+    # return true if p1 is equally distant to the origin as p2 
     def __eq__(self, other): 
         return (self.distance() == other.distance())
-    
+    # return true if p1 is not closer to the origin compared to p2
     def __lt__(self, other): 
         return (self.distance() < other.distance())
-    
+    # return true if p1 is less than or equally distant to the origin compared to p2
     def __le__(self, other): 
         return (self.distance() <= other.distance())
 
